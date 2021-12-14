@@ -1,0 +1,72 @@
+// Dane
+
+ABCD
+1255
+
+M = 2 * A + czescCalkowita(B/4)
+M = 2 * 1 + czescCalkowita(2/4)
+M = 2
+
+N = 9 + D
+N = 14
+
+przykladowe
+eps  = 1e-10 - parametr stopu
+alfa = 0.3   - parametr metody losującej układ
+n = 100      - rozmiar macierzy
+k = 200      - liczba iteracji
+
+/**
+*
+*
+*/
+
+zadanie 1) (dyktowane M = 2)
+    Zbadaj jak zbieżność danego algorytmu zależy od zadanego
+    parametru i danej normy, jeżeli M określa numer zadania:
+
+iteracja prosta, iteruj_roznica, parametr eps, norma 2
+
+W tym celu:
+    - kilka wstępnych eksperymentów ==> określić zakres paremtru,
+    którego wpływ zbadasz, można wykorzystać tu metodę testy()
+    - uzupełnij body badaj_zbieznosc() w zadanie1.py i opisz jej
+    działanie w raporcie (nie trzeba przeklejać kodu)
+    - dla każdej z N wartości parametru wykonaj co najmniej 3
+    eksperymenty, zapisz wybrane charakterystyki (normę macierzy,
+    liczbę iteracji oraz niedokładność rozwiązania) i dla każdej
+    z nich wyznacz jej średnią wartość
+    - wykonaj odpowiedni wykres zależności wybranej charakterystki
+    od zadanego parametru (możesz wykorzystać excel sheet)
+    - zapisz wnioski
+
+/**
+*
+*
+*/
+
+zadanie 5) (dyktowane C = 5)
+    Zbadaj wpływ zadanego parametru na efektywność uzyskiwania
+    rankingu stron poniższymi metodami, jeżeli C określa num zadania:
+
+iteracja Seidela, met. potęgowa, iteruj_roznica, parametr eps, norma 0
+
+Rozważ N różnych wartości tego parametru.
+    - wykonaj kilka wstępnych eksperymentów, by określić zakres parametru,
+    którego wpływ badasz, możesz w tym celu wykorzystać metodę testy()
+    pliku zadanie2.py, opisz przebieg testów w raporcie
+    - uzupełnij ciało metyody badaj_zbieznosc() pligu zadanie2.py i opisz jej
+    działanie w raporcie, a następnie dla każdej z N wartości parametru
+    wykonaj co najmniej trzy eksperymenty, zapisz wybrane charakterystyki
+    (liczbę iteracji, średnią liczbę linków na stronie, niedokładność rozwiązania)
+    i dla każdej z nich wyznacz jej średnią wartość
+    - podsumuj eksperyment i zapisz wnioski w raporcie
+
+/*
+*
+*
+*/
+
+NAZWAĆ PLIK RAPORTU PiwowarczykPawel-Raport2.pdf
+
+Deadline czwartek 23:59
