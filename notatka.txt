@@ -25,7 +25,7 @@ zadanie 1) (dyktowane M = 2)
     Zbadaj jak zbieżność danego algorytmu zależy od zadanego
     parametru i danej normy, jeżeli M określa numer zadania:
 
-iteracja prosta, iteruj_roznica, parametr eps, norma 2
+iteracja Seidela, iteruj, parametr n, norma 1
 
 W tym celu:
     - kilka wstępnych eksperymentów ==> określić zakres paremtru,
@@ -55,11 +55,11 @@ Rozważ N różnych wartości tego parametru.
     - wykonaj kilka wstępnych eksperymentów, by określić zakres parametru,
     którego wpływ badasz, możesz w tym celu wykorzystać metodę testy()
     pliku zadanie2.py, opisz przebieg testów w raporcie
-    - uzupełnij ciało metyody badaj_zbieznosc() pligu zadanie2.py i opisz jej
-    działanie w raporcie, a następnie dla każdej z N wartości parametru
+    - uzupełnij ciało metyody badaj_zbieznosc() pligu zadanie2.py i opisz
+    jej działanie w raporcie, a następnie dla każdej z N wartości parametru
     wykonaj co najmniej trzy eksperymenty, zapisz wybrane charakterystyki
-    (liczbę iteracji, średnią liczbę linków na stronie, niedokładność rozwiązania)
-    i dla każdej z nich wyznacz jej średnią wartość
+    (liczbę iteracji, średnią liczbę linków na stronie, niedokładność
+    rozwiązania) i dla każdej z nich wyznacz jej średnią wartość
     - podsumuj eksperyment i zapisz wnioski w raporcie
 
 /*

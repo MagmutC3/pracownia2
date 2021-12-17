@@ -119,5 +119,5 @@ class Potegowa:
             self.y*self.lambdy[-1]
         )
         odchyl /= self.u.norma_wektora(norma, self.y)
-        print(f"Wzgledna niedokladnosc rozwiazania: {odchyl}")
+        # print(f"Wzgledna niedokladnosc rozwiazania: {odchyl}")
         return odchyl

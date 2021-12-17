@@ -36,7 +36,50 @@ class Wykresy:
         y_min = dane_min - delta
         y_max = dane_max + delta
         plt.ylim(y_min, y_max)
-        plt.xlabel("Numer iteracji")
+        plt.xticks(ticks = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14], labels = [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 59])
+        # plt.xlim(3, 59)
+        plt.xlabel("Rozmiar macierzy")
+        plt.ylabel(opis_OY)
+        plt.margins(0.1)
+        local = "upper right"
+        if dane3 is None:
+            if dane2 is None:
+                plt.legend(seria1, [opis1], loc = local)
+            else:
+                plt.legend(seria1 + seria2, [opis1, opis2], loc = local)
+        else:
+            plt.legend(seria1 + seria2 + seria3, [opis1, opis2, opis3], loc = local)
+        plt.grid(True)
+        plt.show()
+
+    def badaj_zbieznosc_zadanie_2(
+        self, epsList, tytul, opis_OY, dane1, opis1,
+        dane2 = None, opis2 = None, dane3 = None, opis3 = None
+    ):
+        """Wykres jednej, dwóch lub trzech serii danych
+            - pierwsza seria - czerwona, druga - niebieska, trzecia - zielona
+            - nazwa - opis na osi OY"""
+        # tworzymy wykres
+        plt.figure(facecolor = "white")
+        seria1 = plt.plot(dane1, "ro")
+        plt.title(tytul)
+        dane_max = max(dane1)
+        dane_min = min(dane1)
+        if dane2 is not None:
+            dane_max = max(dane_max, max(dane2))
+            dane_min = min(dane_min, min(dane2))
+            seria2 = plt.plot(dane2, "bo")
+        if dane3 is not None:
+            dane_max = max(dane_max, max(dane3))
+            dane_min = min(dane_min, min(dane3))
+            seria3 = plt.plot(dane3, "go")
+        delta = 0.05*(dane_max-dane_min)
+        y_min = dane_min - delta
+        y_max = dane_max + delta
+        plt.ylim(y_min, y_max)
+        plt.xticks(ticks = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14], labels = epsList, rotation=-90)
+        # plt.xlim(3, 59)
+        plt.xlabel("Wartosc eps")
         plt.ylabel(opis_OY)
         plt.margins(0.1)
         local = "upper right"
